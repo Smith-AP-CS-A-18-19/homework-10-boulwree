@@ -41,6 +41,14 @@ public class Homework10 {
 	 * or more neighbors
 	 */
 	public int problem3(int r, int c) {
+		/* You don't need a for loop here, just a bunch
+		 * of if statements to check to see if the up,
+		 * down, left, and right neighbors exist.
+		 * e.g.
+		 * if (r > 0) {
+		 *     sum += arr[r - 1][c];  
+	 	 * }
+		 */
 		/* int sum = 0;
 		for (int i = 0; i < arr[r].length; i++){
 			for(int j = 0; j < arr[c].length; j++){
