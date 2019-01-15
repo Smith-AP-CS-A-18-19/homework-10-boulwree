@@ -7,7 +7,9 @@ public class Homework10 {
 	 * 2D array of int values with the designated rows and
 	 * columns
 	 */
+	 private int[][] arr;
 	public Homework10(int rows, int cols) {
+		this.arr = new int[rows][cols];
 
 	}
 
@@ -17,12 +19,19 @@ public class Homework10 {
 	 * row major order. Return the filled array
 	 */
 	public int[][] problem1(int n) {
-
+		for (int r = 0; r < arr.length; r++){
+			for (int c = 0; c < arr[0].length; c++){
+				arr[r][c] = n;
+					n++;
+				}
+			}
+		return arr;
 	}
 
 	/* Return row r of the stored array
 	 */
 	public int[] problem2(int r) {
+		 return arr[r];
 
 	}
 
@@ -32,20 +41,43 @@ public class Homework10 {
 	 * or more neighbors
 	 */
 	public int problem3(int r, int c) {
-
+		/* int sum = 0;
+		for (int i = 0; i < arr[r].length; i++){
+			for(int j = 0; j < arr[c].length; j++){
+				sum += arr[j][i];
+			}
+		}
+		for (int i = r - 1; i < r + 2; i++){
+      for (int j = c - 1; j < c + 2; j++){
+				sum += arr[j][i];
+			}
+		}
+		return 3;
 	}
+	*/
+	return 3;
+}
 
 	/* Create and return an ArrayList that contains the
 	 * elements from the indicated column
 	 */
 	public ArrayList<Integer> problem4(int c) {
-
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		for(int i = 0; i < arr.length; i++){
+			list.add(arr[i][c]);
+		}
+		return list;
 	}
 
 	/* Calculate and return the sum of the integers in
 	 * the supplied ArrayList
 	 */
 	public int problem5(ArrayList<Integer> aList) {
+		int sum = 0;
+		for(int i = 0; i < aList.size(); i++){
+			sum += aList.get(i);
+		}
+		return sum;
 
 	}
 
